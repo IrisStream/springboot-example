@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:280329926620:task-definition/dev-spring-boot-task-def:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:280329926620:task-definition/dev-spring-boot-task-def:10",
     "containerDefinitions": [
         {
             "name": "springboot-example",
@@ -34,9 +34,10 @@
         }
     ],
     "family": "dev-spring-boot-task-def",
+    "taskRoleArn": "arn:aws:iam::280329926620:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::280329926620:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 10,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -51,6 +52,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -79,7 +83,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-07-26T14:58:38.705Z",
+    "registeredAt": "2025-07-27T05:12:12.124Z",
     "registeredBy": "arn:aws:iam::280329926620:user/dysonngo",
     "enableFaultInjection": false,
     "tags": []
